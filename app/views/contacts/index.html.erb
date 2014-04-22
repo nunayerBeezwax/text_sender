@@ -1,0 +1,8 @@
+<h1>All the Contacts</h1>
+
+<% current_user.contacts.each do |contact| %>
+<ul>
+	<li><%= link_to contact.name, contact_path(contact) %></li>
+	<%= contact.phone %>
+</ul>
+<% end %>
